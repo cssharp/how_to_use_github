@@ -1,0 +1,44 @@
+
+----------------配置篇
+0）安装git
+
+1）生成ssh keys
+ssh-keygen -t rsa -C "xxxxx@xxxxx.com"# Creates a new ssh key using the provided email
+# Generating public/private rsa key pair...
+
+2）上传到oschina
+查看，cat ~/.ssh/id_rsa.pub
+添加到git@osc，http://git.oschina.net/keys
+
+3）测试
+ssh -T git@git.oschina.net
+
+
+
+---------------克隆篇
+1）git clone git@git.oschina.net:pythonic/gitdemo.git
+克隆下载到本地
+
+
+---------------修改push篇
+1）添加或修改
+git status #查看状态
+git add .  #添加到本地
+
+2）本地提交
+git commit -m "我是备注" #提交到本地
+
+3）push到远程
+git push origin local_branch_name:remote_branch_name
+
+
+
+---------------------------------
+1）经典的git开发过程
+2）常用命令 pull/fetch；push；
+3）开发角色：主开发者、一般开发者
+   一般开发者->提交补丁->主开发者->进行审核
+   一般开发者->解决冲突->一般开发者
+
+
+
